@@ -24,7 +24,7 @@ export class AddActiComponent implements OnInit {
    acti : Acti;
   private actiForm: FormGroup;
 
-  
+       
 private selectedLink: string="a";        
   
 setradio(e: string): void   
