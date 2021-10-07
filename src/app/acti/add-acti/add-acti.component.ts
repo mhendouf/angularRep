@@ -37,7 +37,7 @@ setradio(e: string): void
   isSelected(name: string): boolean   
 {  
 
-      if (!this.selectedLink) { // if no radio button is selected, always return false so every nothing is shown gg
+      if (!this.selectedLink) { // if no radio button is selected, always return false so every nothing is shown
           return false;  
 }  
 
