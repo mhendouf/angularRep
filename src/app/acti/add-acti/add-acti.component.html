@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <span class="example-spacer"> </span>
+              <button mat-raised-button mat-dialog-close class="close" color="warn" (click) = "resetForm()"> <mat-icon > close </mat-icon></button>
+    <div class="panel-heading">
+      <h1>Acti</h1>
+      
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-2">
+          <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label>Titre</label>
+              <input type="text" class="form-control" name="" formControlName="titre" id="titre" />
+              <div class="alert alert-danger" *ngIf="titre!=null">
+                <strong> {{titre}}</strong> 
+            </div>
+            </div>
+            <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control" name="" formControlName="title" id="title" />
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea class="form-control" name="" formControlName="description" id="description" > </textarea>
+            </div>
+            <div class="form-group">
+              <label>Participant(e)s</label>
+              <textarea class="form-control" name="" formControlName="participants" id="participants" > </textarea>
+            </div>
+            <div class="form-group">
+            
+              <input type="radio" class="form-"  name="beneAnim" (click)="setradio('b')" id="b" value ="b"/>
+             Bénévole(s) 
+             <input type="radio" class="form-" name="beneAnim" (click)="setradio('a')" id="a" value ="a" checked />
+             Animateur(s)
+            </div>
+               
+              
+              <div *ngIf="isSelected('a')" class="form-group">
+                <input type="text" class="form-control" formControlName="nom_animateur" id="nom_animateur" />
+              </div>
+  
+              <div *ngIf="isSelected('b')" class="form-group">
+                <mat-select placeholder="Bénévole(s) " multiple >
+                  <mat-option *ngFor="let benevole of listBenevoles | async" (click)="onBenevoleMat( benevole)"
+                   ([value])="benevole.id" name="{{ benevole.id }}">{{ benevole.nom }}
+                      
+                  </mat-option>
+              </mat-select>
+              </div>
+            <div class="form-group">
+              
+              <label>Debut</label>
+              <input type="datetime-local" class="form-control" formControlName="date_acti" id="date_acti" />
+
+            </div>
+            <div class="form-group">
+              <label>Fin</label>
+              <input type="datetime-local" class="form-control" formControlName="date_acti_fin" id="date_acti_fin" />
+            </div>
+            <div class="alert alert-danger" *ngIf="date!=null">
+              <strong> {{date}}</strong> 
+          </div>
+          <div class="form-group">
+            <!-- <input type="radio" class="form-" formControlName="repetition" id="repetition" value ="DAILY"/>
+            Journalière
+            <input type="radio" class="form-" formControlName="repetition" id="repetition" value ="WEEKLY"/>
+            Hebdomadaire
+            <input type="radio" class="form-" formControlName="repetition" id="repetition" value ="MONTHLY"/>
+            Mensuelle -->
+          </div>
+            <div class="form-group">
+              <button mat-raised-button ><mat-icon > save</mat-icon> Valider</button> 
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

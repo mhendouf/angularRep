@@ -1,0 +1,17 @@
+input radio {
+  position: left;
+}
+button {
+  color: rgb(252, 252, 252);
+  font: optional;
+  background-color: rgb(60, 197, 231);
+}
+.close {
+  &[align="end"] {
+    justify-content: flex-end;
+  }
+
+  &[align="center"] {
+    justify-content: center;
+  }
+}

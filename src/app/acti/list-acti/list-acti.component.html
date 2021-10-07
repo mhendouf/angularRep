@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <mat-icon>search</mat-icon>
+      <input  type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm"/>
+    </div>
+    <div class="panel-body">
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap alignitems- center pt-3 pb-2 mb-3 border-bottom"
+      >
+        <h1 class="h2">LISTE DES ACTIVITÉS</h1>
+        <button class="btnAjouter" (click)="openDialog()" *ngIf="crudApilog.isAdmin()" mat-raised-button> <mat-icon > add_to_queue</mat-icon> Ajouter </button>
+      </div>
+      <div class="pricing-header mx-auto">
+        <div class="table-reposive">
+          <table
+            class="table table-bordered table-responsive-sm table-responsive-md table-reposive-lg"
+          >
+            <thead>
+              <tr>
+                <th scope="col"> <button class="btnAjouter" (click)="openRapport()" *ngIf="crudApilog.isAdmin()" mat-raised-button> <mat-icon > add_to_queue</mat-icon> Rapport </button></th>
+                <th scope="col">Titre</th>
+                <th scope="col">Début</th>
+                <th scope="col">Fin</th>
+                <th scope="col">Bénévole(s)</th>
+                <th scope="col">Animateur</th>
+                <th class="text-center" scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="listData" >
+              <tr *ngFor="let item of listData | async | paginate: config  |  filter:filterTerm">
+                <th >
+                  <input mat-raised-button class="btn btn-info"
+                    type="checkbox"
+                    name="{{ item.id }}"
+                    ([value])="item.id"
+                    (change)="onPDF($event, item)"
+                  />
+                </th>
+                <td  *ngIf="item.isDone==0" > 
+                  <button  mat-button color="warn" style="margin-left: 20px" (click)="openDialogActi( item.id)" >{{ item.titre }} </button>
+                
+                </td>
+                <td  *ngIf="item.isDone==1" > 
+                  <button  mat-button color="success" style="margin-left: 20px" (click)="openDialogActi( item.id)" >{{ item.titre }} </button>
+                
+                </td>
+                <td>{{ item.date_acti |date :'EEEE : dd, MMMM, yy - H' }}h{{ item.date_acti |date :'mm' }}min</td>
+                <td>{{ item.date_acti_fin |date :'EEEE : d, MMMM, y - HH' }}h{{ item.date_acti |date :'mm' }}min</td>
+                <td>{{ mapbenevole.get(item.id) }}</td>
+                <td>{{ item.nom_animateur}}</td>
+                <td>
+                  <button
+                    class="btn btn-outline-warning"
+                    style="margin-left: 20px"
+                    (click)="selectData(item)"
+                  >
+                  <mat-icon>update</mat-icon>
+                  </button>
+                </td>
+                <td>
+                  <button class="btn btn-outline-danger" (click)="removeData(item.id)">
+                    <mat-icon>delete_outline</mat-icon>
+                  </button>
+                </td>
+              </tr>
+          </table>
+          
+          <div class="form-group">
+           
+            <button  class="btnPdf" (click)="onPDF1()" mat-raised-button><mat-icon>print</mat-icon>PDF</button>
+            <pagination-controls id="basicPaginate" previousLabel="Précédent" nextLabel="Suivant" (pageChange)="pageChanged($event)"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="panel panel-primary">
+<ejs-schedule width='100%' height='550px' [selectedDate]='selectedDate' [currentView]='currentView' [eventSettings]='eventSettings'></ejs-schedule>`
+</div>
+</div> -->

@@ -1,0 +1,32 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.titre {
+  color: rgb(12, 29, 104);
+  background-color: rgb(147, 203, 240);
+}
+.menunav {
+  color: rgb(12, 29, 104);
+  background-color: rgb(147, 203, 240);
+}
+mat-toolbar {
+  color: rgb(246, 247, 250);
+  background-color: rgb(147, 203, 240);
+}
+.toolImg {
+  background-color: rgb(246, 249, 252);
+}
+
+mat-raised-button {
+  color: rgb(252, 252, 252);
+  background-color: rgb(13, 235, 50);
+}
+.btnLogout {
+  color: rgb(247, 127, 127);
+  background-color: rgb(223, 228, 238);
+  position: absolute;
+  right: 20px;
+}
+.img-fluid {
+  width: 500px;
+}

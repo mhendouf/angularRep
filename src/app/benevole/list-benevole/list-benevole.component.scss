@@ -1,0 +1,76 @@
+/* button {
+  color: rgb(252, 252, 252);
+  font: optional;
+  background-color: rgb(95, 158, 160);
+} */
+/* .img-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+ */
+pagination-controls {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.btnAjouter {
+  color: rgb(241, 245, 241);
+  background-color: rgb(60, 197, 231);
+}
+.btnAddNB {
+  color: rgb(13, 14, 13);
+  background-color: rgb(245, 253, 255);
+  right: 100px;
+}
+.card-box {
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+
+.thumb-lg {
+  height: 88px;
+  width: 88px;
+}
+.img-thumbnail {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.close {
+  color: #faf5f5 !important;
+  background: #fd0000;
+}
+
+.btn-rounded {
+  border-radius: 2em;
+  background: rgb(71, 60, 231);
+  color: #fff;
+}
+
+.btn-round {
+  border-radius: 2em;
+  background: rgb(231, 157, 60);
+  color: #fff;
+}
+.text-muted {
+  color: #ada198 !important;
+}
+.text-blue {
+  color: rgb(71, 60, 231);
+}
+h4 {
+  line-height: 22px;
+  font-size: 18px;
+}

@@ -1,0 +1,22 @@
+<mat-toolbar-row  > 
+</mat-toolbar-row>
+     <div class="container">
+        <div class="panel panel-primary">
+     <ejs-schedule  #scheduleObj [readonly]=true [firstDayOfWeek]='startWeek' locale='fr-CH' width='100%' height='550px'  
+      [eventSettings]="eventSettings"  [showHeaderBar]='showHeaderBar' >
+      <ng-template class="tmplt" #eventSettingsTemplate let-data >
+        
+    <div class= "template-wrapperw" > {{data.Subject}}</div>
+   
+  </ng-template>  
+      
+      <e-views>
+        <e-view option = 'Day'  displayName='Jour'   ></e-view>
+        <e-view option = 'Week' displayName='Semaine' startDay ='Monday' endDay='Sunday'>Week-end</e-view>
+        <e-view option = 'Month' displayName='Mois' isSelected='true'>Mois</e-view>
+    </e-views>
+    
+</ejs-schedule>`
+
+</div>
+</div>

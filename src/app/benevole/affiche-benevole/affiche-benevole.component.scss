@@ -1,0 +1,47 @@
+.btnAjouter {
+  color: rgb(241, 245, 241);
+  background-color: rgb(60, 197, 231);
+}
+.btnAddNB {
+  color: rgb(13, 14, 13);
+  background-color: rgb(245, 253, 255);
+  right: 100px;
+}
+.card-box {
+  border-radius: 3px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+
+.thumb-lg {
+  height: 250px;
+  width: 250px;
+}
+.img-thumbnail {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.close {
+  color: #faf5f5 !important;
+  background: #fd0000;
+}
+
+.btn-rounded {
+  border-radius: 2em;
+  background: #eb9956;
+}
+.text-muted {
+  color: #ada198 !important;
+}
+.text-blue {
+  color: rgb(71, 60, 231);
+}
+h4 {
+  line-height: 22px;
+  font-size: 18px;
+}

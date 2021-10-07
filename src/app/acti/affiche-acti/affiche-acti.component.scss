@@ -1,0 +1,27 @@
+.acti {
+  color: rgb(1, 3, 8);
+  background-color: rgb(250, 4, 4);
+  // background-color: rgb(4, 250, 45);
+  text-decoration: aqua;
+}
+.actiDone {
+  color: rgb(1, 3, 8);
+  background-color: rgb(5, 116, 24);
+  text-decoration: aqua;
+}
+mat-toolbar {
+  background-color: rgb(246, 249, 252);
+}
+tr {
+  text-align: left;
+}
+.btn {
+  color: white;
+  position: absolute;
+  right: 600px;
+}
+.btnDone {
+  color: white;
+  position: absolute;
+  right: 600px;
+}

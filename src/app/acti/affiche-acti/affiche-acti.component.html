@@ -1,0 +1,77 @@
+<button mat-raised-button mat-dialog-close class="close" color="warn" (click) = "resetForm()"> <mat-icon > close </mat-icon></button>
+<p> </p>
+<div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading"> 
+        <h1>{{acti.titre}}</h1>
+      </div>
+      <div class="panel-body">
+        <div class="text-center card-box">
+        <mat-toolbar class="acti"  *ngIf="acti.isDone==0">
+           
+                <button class="btn" (click) ="ActiDone(acti.id)" mat-button> <h1>Cliquez ici pour valider l'activité</h1>  </button>
+            
+         </mat-toolbar>
+         <mat-toolbar class="actiDone"  *ngIf="acti.isDone==1">
+            
+                <p class="btnDone" > L'activité a bien été réalisée  </p>
+            
+         </mat-toolbar>
+        <table class="table table-sm table-dark">
+        <tr >
+                  <h4>Titre  </h4> 
+                <th>
+                   <h4>{{acti.titre}}</h4>  
+                </th>
+                 
+               
+                </tr >
+                <tr class="bg-primary" >
+                    <h4> Title  </h4>
+                    <th>
+                        <h4>{{acti.title}}</h4> 
+                     </th>
+                </tr>
+                <tr>
+                   <h4> Description  </h4> 
+                    <th>
+                        <h4>{{acti.description}}</h4> 
+                     </th>
+                 </tr>
+                 <tr class="bg-success">
+                   <h4>Participants  </h4>  
+                     <th>
+                        <h4> {{acti.participants}}</h4>
+                     </th>
+                 </tr>
+                 <tr>
+                   <h4>Date Acti  </h4> 
+                    <th>
+                        <h4>{{acti.date_acti |date :'EEEE  dd MMMM yy - H' }}h{{ acti.date_acti |date :'mm'}} </h4> 
+                     </th>
+                 </tr>
+                 <tr class="bg-warning">
+                     <h4>Benevoles </h4>
+                     <th >
+                       <div >
+                         <h4 *ngFor="let item of benevolelist " >{{item.nom}}</h4>
+                        </div>
+                     </th>
+                 </tr>
+                 <tr>
+                    <h4>Animateur </h4> 
+                     <th>
+                         <h4>{{acti.nom_animateur}}</h4>
+                     </th>
+                  </tr>
+                  <tr  class="bg-info">
+                    <h4> Creer par  </h4> 
+                      <th>
+                         <h4>Utilisateur</h4>
+                     </th>
+                  </tr>
+                </table>
+    </div>  
+    </div>
+</div>
+</div>
