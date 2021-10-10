@@ -24,7 +24,7 @@ export class AddActiComponent implements OnInit {
    acti : Acti;
   private actiForm: FormGroup;
 
-  
+       
 private selectedLink: string="a";        
   
 setradio(e: string): void   
@@ -37,7 +37,7 @@ setradio(e: string): void
   isSelected(name: string): boolean   
 {  
 
-      if (!this.selectedLink) { // if no radio button is selected, always return false so every nothing is shown  
+      if (!this.selectedLink) { // if no radio button is selected, always return false so every nothing is shown  okkkk
           return false;  
 }  
 

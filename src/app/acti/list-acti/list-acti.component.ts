@@ -20,7 +20,7 @@ registerLocaleData(localeFr, 'fr');
   styleUrls: ['./list-acti.component.scss'],
 })
 export class ListActiComponent implements OnInit {
-
+//test
   public data: object[] = [];
   public test= 0;
       public selectedDate: Date = new Date();
