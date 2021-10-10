@@ -10,8 +10,8 @@ import { Passage } from '../modele/passage';
   providedIn: 'root'
 })
 export class BenevoleService {
-  private baseUrl = 'http://localhost:8080/benevole';
-  private baseUr = 'http://localhost:8080';
+  private baseUrl = 'http://https://actibene.herokuapp.com/benevole';
+  private baseUr = 'http://https://actibene.herokuapp.com';
   choixmenu: string = 'A';
   listData:any;
   public dataFormBenevole: FormGroup;
