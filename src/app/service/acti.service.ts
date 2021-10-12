@@ -9,7 +9,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root',
 })
 export class ActiService {
-  private baseUrl = 'http://localhost:8080/acti';
+  private baseUrl = 'actibene.herokuapp.com/acti';
   private jwtToken =null;
   choixmenu: string = 'A';
   idacti;
