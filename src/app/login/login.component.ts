@@ -25,7 +25,7 @@ infoForm() {
   });
 }
 mode: number = 0;
-private baseUrl = 'http://localhost:4200';
+//private baseUrl = 'http://localhost:4200';
   constructor(public toastr: ToastrService, public crudApi:LoginService,public fb: FormBuilder, private http:HttpClient, private route: Router) { }
 
   ngOnInit(): void {
