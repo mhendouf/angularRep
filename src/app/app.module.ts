@@ -1,6 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { environment } from './../environments/environment';
 import { AppComponent } from './app.component';
 import { AddActiComponent } from './acti/add-acti/add-acti.component';
 import { ListActiComponent } from './acti/list-acti/list-acti.component';
@@ -113,4 +113,9 @@ const routes: Routes = [
   bootstrap: [AppComponent],
   
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    console.log(environment.production); // Logs false for default environment
+  }
+  title = 'app works!';
+}
