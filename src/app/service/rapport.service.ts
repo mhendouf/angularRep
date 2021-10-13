@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class RapportService {
-  private baseUrl = 'http://actibene.herokuapp.com/login';
+  private baseUrl = 'https://actibene.herokuapp.com/login';
   private jwtToken =null;
   choixmenu: string = 'A';
   idacti;
