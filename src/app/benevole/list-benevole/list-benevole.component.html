@@ -148,7 +148,14 @@
                   <span class="example-spacer"> </span>
                  <button mat-raised-button  class="close"  (click)="removeData(item.id)"> <mat-icon > close </mat-icon></button>
                     <div class="member-card pt-2 pb-2">
-                        <div class="thumb-lg member-thumb mx-auto"><img  [src]="mapImg.get(item.id)" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                        <div class="thumb-lg member-thumb mx-auto">
+                          <div *ngIf="mapImg.get(item.id)"> 
+                            <img  [src]="mapImg.get(item.id)" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                          </div>
+                          <div *ngIf="!mapImg.get(item.id)"> 
+                            <img  src="/assets/photoprofil.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
+                          </div>
+                          
                         <div id="myModal" class="modal">
 
                           <!-- The Close Button -->
