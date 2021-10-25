@@ -1,4 +1,4 @@
-import { registerLocaleData } from '@angular/common';
+import { formatDate, registerLocaleData } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -82,6 +82,7 @@ export class ListActiComponent implements OnInit {
     this.listData.forEach(ac=>{
       this.test=1;
       ac.forEach(a=>{
+        
         a.benevoles_list.forEach(b=>{
           ++p;
           if(this.mapbenevole.get(a.id))

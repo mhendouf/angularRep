@@ -9,6 +9,7 @@
         class="d-flex justify-content-between flex-wrap flex-md-nowrap alignitems- center pt-3 pb-2 mb-3 border-bottom"
       >
         <h1 class="h2">LISTE DES ACTIVITÉS</h1>
+        <pagination-controls id="basicPaginate" previousLabel="Précédent" nextLabel="Suivant" (pageChange)="pageChanged($event)"></pagination-controls>
         <button class="btnAjouter" (click)="openDialog()" *ngIf="crudApilog.isAdmin()" mat-raised-button> <mat-icon > add_to_queue</mat-icon> Ajouter </button>
       </div>
       <div class="pricing-header mx-auto">
@@ -45,7 +46,7 @@
                   <button  mat-button color="success" style="margin-left: 20px" (click)="openDialogActi( item.id)" >{{ item.titre }} </button>
                 
                 </td>
-                <td>{{ item.date_acti |date :'EEEE : dd, MMMM, yy - H' }}h{{ item.date_acti |date :'mm' }}min</td>
+                <td>{{ item.date_acti |date :'EEEE : dd, MMMM, y - H' }}h{{ item.date_acti |date :'mm' }}min</td>
                 <td>{{ item.date_acti_fin |date :'EEEE : d, MMMM, y - HH' }}h{{ item.date_acti_fin |date :'mm' }}min</td>
                 <td>{{ mapbenevole.get(item.id) }}</td>
                 <td>{{ item.nom_animateur}}</td>
@@ -70,7 +71,7 @@
           <div class="form-group">
            
             <button  class="btnPdf" (click)="onPDF1()" mat-raised-button><mat-icon>print</mat-icon>PDF</button>
-            <pagination-controls id="basicPaginate" previousLabel="Précédent" nextLabel="Suivant" (pageChange)="pageChanged($event)"></pagination-controls>
+          <!--   <pagination-controls id="basicPaginate" previousLabel="Précédent" nextLabel="Suivant" (pageChange)="pageChanged($event)"></pagination-controls> -->
           </div>
         </div>
       </div>
